@@ -1,45 +1,118 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+nav {
+  background-color: #333;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  overflow-x: hidden;
+  box-shadow:
+    0 0 10px rgba(191, 255, 0, 0.2),
+    0 0 20px rgba(0, 123, 255, 0.2),
+    0 0 40px rgba(0, 123, 255, 0.2),
+    inset 0 0 10px rgba(0, 123, 255, 0.2);
+  border-radius: 20px 20px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav.nav-active {
+  left: 0;
+}
+
+.humberger {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fb0a0a;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 2;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  display: block;
+  padding: 2rem 20px;
+  text-align: center;
+  transition: 0.5s;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
 }
 
+.nav-lists {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding-top: 40%;
+  font-style: oblique;
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px;
+}
+
+.nav-lists li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  transition: background-color 1.1s ease;
+}
+
+.nav-lists li a:hover,
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  background-color: #08f;
+  color: #fff;
+  border-radius: 10px;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.nav-lists li a.active {
+  background-color: rgb(0, 255, 0);
+  padding-right: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  align-items: center;
+  padding: 10px 4rem;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+  nav {
+    width: 250px;
+    left: 0;
   }
 
-  to {
-    transform: rotate(360deg);
+  .humberger {
+    display: none;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
