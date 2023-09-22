@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #fff;
   height: 100%;
   width: 250px;
   position: fixed;
@@ -32,7 +32,7 @@ nav.nav-active {
   display: block;
   font-size: 30px;
   cursor: pointer;
-  color: #fb0a0a;
+  color: #08f;
   padding: 10px;
   position: absolute;
   top: 5px;
@@ -41,7 +41,7 @@ nav.nav-active {
 }
 
 .logo {
-  color: #fff;
+  color: #000;
   font-size: 24px;
   text-decoration: none;
   display: block;
@@ -56,23 +56,21 @@ nav.nav-active {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
+  gap: 10px;
   padding-top: 40%;
   font-style: oblique;
   letter-spacing: 1px;
 }
 
 footer a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: 0.5s;
-  padding: 5px;
+  padding: 7px;
 }
 
 .nav-lists li a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   display: block;
   padding: 10px 30px;
@@ -88,7 +86,7 @@ footer a {
 
 .nav-lists li a.active {
   background-color: rgb(0, 255, 0);
-  padding-right: 20px;
+  padding-right: 5.5rem;
 }
 
 footer {
@@ -98,7 +96,7 @@ footer {
   text-align: center;
   align-items: center;
   padding: 10px 4rem;
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-style: italic;
   text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
