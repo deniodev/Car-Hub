@@ -1,3 +1,7 @@
+.app {
+  max-width: 1920px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -99,10 +103,6 @@ footer {
   font-size: 14px;
   font-style: italic;
   text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
-}
-
-.app {
-  max-width: 1920px;
 }
 
 /* Media Query for Larger Screens */
