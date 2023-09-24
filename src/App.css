@@ -101,6 +101,10 @@ footer {
   text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
 }
 
+.app {
+  max-width: 1920px;
+}
+
 /* Media Query for Larger Screens */
 @media screen and (min-width: 768px) {
   nav {
