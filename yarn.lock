@@ -3055,7 +3055,7 @@ react-is@^18.0.0:
 
 react-redux@^8.1.2:
   version "8.1.2"
-  resolved "https://registry.npmjs.org/react-redux/-/react-redux-8.1.2.tgz"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.1.2.tgz#9076bbc6b60f746659ad6d51cb05de9c5e1e9188"
   integrity sha512-xJKYI189VwfsFc4CJvHqHlDrzyFTY/3vZACbE+rr/zQ34Xx1wQfB4OTOSeOSNrF6BDVe8OOdxIrAnMGXA3ggfw==
   dependencies:
     "@babel/runtime" "^7.12.1"
