@@ -66,6 +66,7 @@ nav.nav-active {
 }
 
 footer a {
+  display: inline-flex;
   color: #000;
   text-decoration: none;
   transition: 0.5s;

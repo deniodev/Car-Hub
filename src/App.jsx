@@ -1,13 +1,14 @@
-import './App.css';
 import { Provider } from 'react-redux';
-import store from './redux/store';
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import Register from './pages/register';
 import Login from './pages/login';
-import Logout from './components/logout';
+
 import ProtectedRoutes from './components/protetedRoutes';
 import Navbar from './components/Navbar';
+
+import store from './redux/store';
+import './App.css';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
             path="/"
             element={
               <ProtectedRoutes>
-                <Logout />
+                <Navbar />
               </ProtectedRoutes>
             }
           />
@@ -31,12 +32,7 @@ function App() {
         </BrowserRouter>
       </Provider>
     </div>
-  //   <Router>
-  //   <Routes>
-  //     <Route path="/" element={<Navbar />} />
-  //     </Routes>
-  // </Router>
-  )
+   )
 }
 
 export default App

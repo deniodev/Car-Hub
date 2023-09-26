@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import {useState} from 'react';
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import LogoutLink from "./LogoutLink";
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
@@ -28,6 +29,10 @@ const Navbar = () => {
     
                     <li>
                         <NavLink to="/delete">Delete Car</NavLink>
+                    </li>
+
+                    <li>
+                        <LogoutLink />
                     </li>
 
             </ul>
