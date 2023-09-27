@@ -1,3 +1,7 @@
+.app {
+  max-width: 1920px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -62,6 +66,7 @@ nav.nav-active {
 }
 
 footer a {
+  display: inline-flex;
   color: #000;
   text-decoration: none;
   transition: 0.5s;
