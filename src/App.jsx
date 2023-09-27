@@ -6,6 +6,7 @@ import Login from './pages/login';
 
 import ProtectedRoutes from './components/protetedRoutes';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 import store from './redux/store';
 import './App.css';
@@ -21,13 +22,14 @@ function App() {
             path="/"
             element={
               <ProtectedRoutes>
-                <Navbar />
+                <Home />
               </ProtectedRoutes>
             }
           />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path="/" element={<Navbar />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
         </BrowserRouter>
       </Provider>
