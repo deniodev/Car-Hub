@@ -5,7 +5,8 @@ const initialState = {
   cars: [],
   isLoading: true,
   err: true,
-  // errMsg: '',
+  carDetails: {},
+  hasErrors: false,
 };
 
 const url = 'http://localhost:3000/api/v1/cars';
@@ -19,16 +20,13 @@ export const getCars = createAsyncThunk('cars/getCars', async (_, { rejectWithVa
   }
 });
 
-// const getCars = createAsyncThunk('cars/getCars', async (thunkAPI) => {
-//   try {
-//     const resp = await axios.get(url)
-//     // console.log('API response:', response.data)
-//     return resp.data
-//   } catch (e) {
-//     // console.error('API error:', e)
-//     return thunkAPI.rejectWithValue({ error: e.message })
-//   }
-// })
+export const fetchCarDetails = createAsyncThunk(
+  'carDetails/fetchCarDetails',
+  async (id) => {
+      const response = await axios.get(`http://localhost:3000/api/v1/cars/${id}`)
+      return response.data
+  }
+)
 
 const carsSlice = createSlice({
   name: 'cars',
@@ -48,6 +46,18 @@ const carsSlice = createSlice({
         cars: payload,
         isLoading: false,
       }))
+      .addCase(fetchCarDetails.pending, (state) => {
+        state.isLoadingloading = true
+    })
+    .addCase(fetchCarDetails.fulfilled, (state, { payload }) => {
+        state.carDetails = payload
+        state.isLoading= false
+        state.hasErrors = false
+    })
+    .addCase(fetchCarDetails.rejected, (state) => {
+        state.isLoading = false
+        state.hasErrors = true
+    })
   }
 })
 
