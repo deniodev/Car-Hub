@@ -7,6 +7,9 @@ import Login from './pages/login';
 import ProtectedRoutes from './components/protetedRoutes';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import CarDetails from './components/Main/CarDetails';
+import ReservationForm from './components/ReservationForm';
+import ReservationList from './components/ReservationList';
 
 import store from './redux/store';
 import './App.css';
@@ -30,6 +33,10 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path="/" element={<Navbar />} />
           <Route exact path="/" element={<Home />} />
+          <Route path="/cars/:id" element={<CarDetails />} />
+          <Route path="/reservationform" element={<ReservationForm />} />
+          <Route path="/reservationlist" element={<ReservationList />} />
+
         </Routes>
         </BrowserRouter>
       </Provider>

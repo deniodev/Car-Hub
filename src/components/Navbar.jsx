@@ -13,14 +13,15 @@ const Navbar = () => {
     return (
         <div>
         <header>
-            <nav className={isActive ? "nav-active" : ""} >            
-            <NavLink to="/home" className="logo">Car Hub</NavLink>
+        <nav className={isActive ? "nav-active" : ""}>
+            
+            <NavLink to="/home" className="logo">Nizzan</NavLink>
             <ul className="nav-lists">
                 <li>
-                    <NavLink to="/reservation">Reservation</NavLink>
+                    <NavLink to="/reservationform">Reservation</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/myresevation">My Reservation</NavLink>
+                    <NavLink to="/reservationlist">My Reservation</NavLink>
                 </li>
                     <li>
                         <NavLink to="/add">Add Car</NavLink>
@@ -41,7 +42,7 @@ const Navbar = () => {
         <a href="https://twitter.com/" target="_blank" rel="noreferrer"><FaTwitter /></a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram /></a>
-        <p>© 2023 Car Hub</p>
+        <p>© 2021 Nizzan</p>
     </footer>
         </nav>
         <div className="humberger" onClick={handleClick}>
