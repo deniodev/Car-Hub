@@ -65,25 +65,25 @@ const RegisterForm = () => {
 
   return (
     <div
-      className="h-screen overflow-hidden bg-cover bg-no-repeat p-12 text-center"
+      className="tw-h-screen tw-overflow-hidden tw-bg-cover tw-bg-no-repeat tw-p-12 tw-text-center"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
     >
       <div
-        className="absolute grid place-items-center bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+        className="tw-absolute tw-grid tw-place-items-center tw-bottom-0 tw-left-0 tw-right-0 tw-top-0 tw-h-full tw-w-full tw-overflow-hidden tw-bg-fixed"
         style={{
           backgroundColor: 'rgba(115, 145, 6, 0.9)',
         }}
       >
-        <div className="items-center text-gray-300 p-2 rounded w-full max-w-[40rem] mx-auto">
-          <h1 className="text-2xl font-semi-bold text-white mb-6">Sign up</h1>
+        <div className="tw-items-center tw-text-gray-300 tw-p-2 tw-rounded tw-w-full tw-max-w-[40rem] tw-mx-auto">
+          <h1 className="tw-text-2xl tw-font-semi-bold tw-text-white tw-mb-6">Sign up</h1>
 
-          <form className="flex flex-col gap-4 p-2">
-            {error && <p className="text-red-500">{error}</p>}
+          <form className="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+            {error && <p className="tw-text-red-500">{error}</p>}
 
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-1">
-              <div className="flex-1">
+            <div className="tw-flex flex-col tw-gap-4 tw-md:flex-row tw-md:align-center tw-md:gap-1">
+              <div className="tw-flex-1">
                 <input
                   type="text"
                   id="username"
@@ -91,14 +91,14 @@ const RegisterForm = () => {
                   onChange={(e) => setUsername(e.target.value)}
                   required
                   aria-label="Username"
-                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+                  className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-md:rounded-r-none tw-md:rounded-l-full tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
                 />
                 {errors.username && (
-                  <p className="text-red-500">{errors.username}</p>
+                  <p className="tw-text-red-500">{errors.username}</p>
                 )}
               </div>
 
-              <div className="flex-1">
+              <div className="tw-flex-1">
                 <input
                   type="email"
                   id="email"
@@ -106,14 +106,14 @@ const RegisterForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   aria-label="Email"
-                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+                  className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-md:rounded-l-none tw-md:rounded-r-full tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
                 />
-                {errors.email && <p className="text-red-500">{errors.email}</p>}
+                {errors.email && <p className="tw-text-red-500">{errors.email}</p>}
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-1">
-              <div className="flex-1">
+            <div className="tw-flex flex-col tw-gap-4 tw-md:flex-row tw-md:align-center tw-md:gap-1">
+              <div className="tw-flex-1">
                 <input
                   type="password"
                   id="password"
@@ -121,14 +121,14 @@ const RegisterForm = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   aria-label="Password"
-                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+                  className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-md:rounded-r-none tw-md:rounded-l-full tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
                 />
                 {errors.password && (
-                  <p className="text-red-500">{errors.password}</p>
+                  <p className="tw-text-red-500">{errors.password}</p>
                 )}
               </div>
 
-              <div className="flex-1">
+              <div className="tw-flex-1">
                 <input
                   type="password"
                   id="confirmPassword"
@@ -136,21 +136,21 @@ const RegisterForm = () => {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                   aria-label="Confirm Password"
-                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+                  className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-md:rounded-l-none tw-md:rounded-r-full tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
                 />
                 {errors.confirmPassword && (
-                  <p className="text-red-500">{errors.confirmPassword}</p>
+                  <p className="tw-text-red-500">{errors.confirmPassword}</p>
                 )}
               </div>
             </div>
 
             {isLoading ? (
               <div>
-                <div className="bg-white rounded-full py-3 px-4 grid place-items-center w-full">
-                  <div role="status" className="flex items-center">
+                <div className="tw-bg-white tw-rounded-full tw-py-3 tw-px-4 tw-grid tw-place-items-center tw-w-full">
+                  <div role="status" className="tw-flex tw-items-center">
                     <svg
                       aria-hidden="true"
-                      className="inline w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-lime-400"
+                      className="tw-inline tw-w-5 tw-h-5 tw-mr-2 tw-text-gray-200 tw-animate-spin tw-dark:text-gray-600 tw-fill-lime-400"
                       viewBox="0 0 100 101"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -164,19 +164,19 @@ const RegisterForm = () => {
                         fill="currentFill"
                       />
                     </svg>
-                    <span className="text-lime-700 text-xs flex-1 w-max">
+                    <span className="tw-text-lime-700 tw-text-xs tw-flex-1 tw-w-max">
                       Signing in...
                     </span>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="grid place-items-center">
+              <div className="tw-grid tw-place-items-center">
                 <button
                   type="button"
                   onClick={handleSubmit}
                   disabled={isLoading}
-                  className="w-full md:w-max bg-white text-lime-700 rounded-full py-2 px-6 hover:bg-gray-200"
+                  className="w-full tw-md:w-max tw-bg-white tw-text-lime-700 tw-rounded-full tw-py-2 tw-px-6 tw-hover:bg-gray-200"
                 >
                   Sign up
                 </button>
@@ -188,7 +188,7 @@ const RegisterForm = () => {
             Already have an account?{' '}
             <Link
               to="/login"
-              className="text-lg font-semi-bold text-white hover:text-gray-300 hover:underline"
+              className="tw-text-lg tw-font-semi-bold tw-text-white tw-hover:text-gray-300 tw-hover:underline"
             >
               Log in
             </Link>
