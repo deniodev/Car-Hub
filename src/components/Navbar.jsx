@@ -13,8 +13,7 @@ const Navbar = () => {
     return (
         <div>
         <header>
-        <nav className={isActive ? "nav-active" : ""}>
-            
+            <nav className={isActive ? "nav-active" : ""} >            
             <NavLink to="/home" className="logo">Nizzan</NavLink>
             <ul className="nav-lists">
                 <li>
