@@ -14,7 +14,7 @@ const Navbar = () => {
         <div>
         <header>
             <nav className={isActive ? "nav-active" : ""} >            
-            <NavLink to="/home" className="logo">Nizzan</NavLink>
+            <NavLink to="/home" className="logo">Car Hub</NavLink>
             <ul className="nav-lists">
                 <li>
                     <NavLink to="/reservation">Reservation</NavLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
         <a href="https://twitter.com/" target="_blank" rel="noreferrer"><FaTwitter /></a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram /></a>
-        <p>© 2021 Nizzan</p>
+        <p>© 2023 Car Hub</p>
     </footer>
         </nav>
         <div className="humberger" onClick={handleClick}>
