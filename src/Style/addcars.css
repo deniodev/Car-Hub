@@ -1,8 +1,8 @@
-/* .carpage {
+.carpage {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url("../assets/alex-suprun-A53o1drQS2k-unsplash.jpg");
+  background-image: url('../assets/alex-suprun-A53o1drQS2k-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -74,21 +74,21 @@
   font-weight: bold;
 }
 
-.addcar-cont form button[type="submit"] {
+.addcar-cont form button[type='submit'] {
   background: linear-gradient(to right, #d4d4d4, rgb(111, 142, 0));
   font-weight: bolder;
   font-size: 25px;
   padding: 15px;
   width: 10rem;
   border-radius: 50px;
-  border: 2px solid  #000000b5;
-  box-shadow: 0 -10px  rgba(50, 50, 50, 0.9);
+  border: 2px solid #000000b5;
+  box-shadow: 0 -10px rgba(50, 50, 50, 0.9);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.addcar-cont form button[type="submit"]:hover {
-  box-shadow: 0 -7px  rgba(50, 50, 50, 0.9);
+.addcar-cont form button[type='submit']:hover {
+  box-shadow: 0 -7px rgba(50, 50, 50, 0.9);
   background: linear-gradient(to right, #d4d4d4, rgb(90, 115, 2));
 }
 
@@ -96,11 +96,11 @@
   margin-top: 5px;
 }
 
-.addcar-cont form button[type="submit"]:active {
+.addcar-cont form button[type='submit']:active {
   background-color: rgb(107, 137, 0);
 }
 
-.addcar-cont form button[type="submit"]:disabled {
+.addcar-cont form button[type='submit']:disabled {
   background: rgb(150, 191, 1);
   color: #fff;
   border: none;
@@ -156,11 +156,11 @@
     padding-bottom: 20px;
   }
 
-  .addcar-cont form button[type="submit"] {
+  .addcar-cont form button[type='submit'] {
     padding: 10px 3px 10px 5px;
   }
 
-  .addcar-cont form button[type="submit"]:disabled {
+  .addcar-cont form button[type='submit']:disabled {
     font-size: 20px;
   }
-} */
+}
