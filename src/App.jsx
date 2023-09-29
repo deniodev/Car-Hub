@@ -31,7 +31,6 @@ function App() {
                 </ProtectedRoutes>
               }
             />
-            <Route exact path="/delete" element={<DeleteCar />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Navbar />} />
@@ -40,6 +39,7 @@ function App() {
             <Route path="/reservationform" element={<ReservationForm />} />
             <Route path="/reservationlist" element={<ReservationList />} />
             <Route path="/addcar" element={<AddCars />} />
+            <Route exact path="/delete" element={<DeleteCar />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
