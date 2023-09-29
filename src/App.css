@@ -18,11 +18,8 @@ nav {
   top: 0;
   left: -250px;
   overflow-x: hidden;
-  box-shadow:
-    0 0 10px rgba(191, 255, 0, 0.2),
-    0 0 20px rgba(0, 123, 255, 0.2),
-    0 0 40px rgba(0, 123, 255, 0.2),
-    inset 0 0 10px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 0 10px rgba(191, 255, 0, 0.2), 0 0 20px rgba(0, 123, 255, 0.2),
+    0 0 40px rgba(0, 123, 255, 0.2), inset 0 0 10px rgba(0, 123, 255, 0.2);
   border-radius: 20px 20px 0 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -93,6 +90,11 @@ footer a {
   padding-right: 5.5rem;
 }
 
+.delete-table {
+  display: flex;
+  padding-top: 60px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -115,5 +117,19 @@ footer {
 
   .humberger {
     display: none;
+  }
+
+  .delete-table {
+    display: flex;
+    padding: 40px 0 0 300px;
+  }
+
+  .car-img-table {
+    width: 10%;
+  }
+
+  .MuiButton-containedPrimary {
+    color: black !important;
+    background-color: rgb(150, 191, 1) !important;
   }
 }
