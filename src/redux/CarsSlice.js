@@ -22,17 +22,6 @@ export const getCars = createAsyncThunk(
     }
   }
 );
-export const getCars = createAsyncThunk(
-  'cars/getCars',
-  async (_, { rejectWithValue }) => {
-    try {
-      const resp = await axios(url);
-      return resp.data;
-    } catch (e) {
-      return rejectWithValue('unable to access data');
-    }
-  }
-);
 
 export const delCarItems = createAsyncThunk(
   'cars/delCarItems',
@@ -122,4 +111,5 @@ const carsSlice = createSlice({
   },
 });
 
+export const { deleteItem } = carsSlice.actions;
 export default carsSlice.reducer;
