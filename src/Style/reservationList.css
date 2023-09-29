@@ -1,37 +1,36 @@
 /* styles.css */
 
-.list-container {
+.list-wrapper {
   padding: 20px;
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
 }
 
-table {
+.list-wrapper table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-table,
+.list-wrapper table,
 th,
 td {
   border: 1px solid #ddd;
 }
 
-th,
+.list-wrapper table th,
 td {
   padding: 8px;
   text-align: left;
   font-size: 16px;
 }
 
-th {
+.list-wrapper table th {
   background-color: #f2f2f2;
   font-weight: bold;
 }
 
-thead th {
+.list-wrapper table thead th {
   background-color: rgb(169, 215, 4);
 }
 
@@ -44,9 +43,8 @@ tr:hover {
 }
 
 @media screen and (min-width: 768px) {
-  table {
-    width: 80%;
+  .list-wrapper table {
+    margin-left: 255px;
     border-collapse: collapse;
-    margin-left: 260px;
   }
 }
