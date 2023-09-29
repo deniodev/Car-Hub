@@ -74,9 +74,9 @@ const findCarId = (name) => {
     <Navbar />
     <div className="form-container">
     <div className="reservation-title">
-    <h1> car is availbale and ready to be reserved!</h1>
+    <h1> Car is availbale and ready to be reserved!</h1>
       <hr />
-    <p style={{paddingTop: '5px'}}> please fill the form below to reserve the car and enjoy, you can reserve the car for one day only</p>
+    <p style={{paddingTop: '5px'}}> Please fill the form below to reserve the car and enjoy, you can reserve the car for one day only</p>
     </div>
       <form onSubmit={handleSubmit}>
         <input
