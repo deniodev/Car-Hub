@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
@@ -11,43 +11,42 @@ const initialState = {
 
 const url = 'http://localhost:3000/api/v1/cars';
 
-export const getCars = createAsyncThunk('cars/getCars', async (_, { rejectWithValue }) => {
-  try {
-    const resp = await axios(url);
-    return resp.data;
-  } catch (e) {
-    return rejectWithValue('unable to access data')
+export const getCars = createAsyncThunk(
+  'cars/getCars',
+  async (_, { rejectWithValue }) => {
+    try {
+      const resp = await axios(url);
+      return resp.data;
+    } catch (e) {
+      return rejectWithValue('unable to access data');
+    }
   }
-});
+);
 
 export const fetchCarDetails = createAsyncThunk(
   'carDetails/fetchCarDetails',
-  // async (id) => {
-  //     const response = await axios.getaxios.get(`${url}/${id}`)
-  //     return response.data
-  // }
 
   async (id) => {
     try {
-      const response = await axios.get(`${url}/${id}`)
-      return response.data
+      const response = await axios.get(`${url}/${id}`);
+      return response.data;
     } catch (error) {
-      return error.message
+      return error.message;
     }
   }
-)
+);
 
 export const createCars = createAsyncThunk(
   'cars/createCars',
   async (carData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(url, carData)
-      return response.data
+      const response = await axios.post(url, carData);
+      return response.data;
     } catch (err) {
-      return rejectWithValue('Unable to create car')
+      return rejectWithValue('Unable to create car');
     }
   }
-)
+);
 
 const carsSlice = createSlice({
   name: 'cars',
@@ -55,7 +54,7 @@ const carsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getCars.pending, (state) => {
-        state.isLoading = true
+        state.isLoading = true;
       })
       .addCase(getCars.fulfilled, (state, { payload }) => ({
         ...state,
@@ -69,16 +68,16 @@ const carsSlice = createSlice({
       }))
 
       .addCase(fetchCarDetails.pending, (state) => {
-        state.isLoadingloading = true
+        state.isLoadingloading = true;
       })
       .addCase(fetchCarDetails.fulfilled, (state, { payload }) => {
-        state.carDetails = payload
-        state.isLoading = false
-        state.hasErrors = false
+        state.carDetails = payload;
+        state.isLoading = false;
+        state.hasErrors = false;
       })
       .addCase(fetchCarDetails.rejected, (state) => {
-        state.isLoading = false
-        state.hasErrors = true
+        state.isLoading = false;
+        state.hasErrors = true;
       })
 
       .addCase(createCars.fulfilled, (state, { payload }) => ({
@@ -90,8 +89,8 @@ const carsSlice = createSlice({
         ...state,
         isLoading: false,
         error: payload,
-      }))
-  }
-})
+      }));
+  },
+});
 
 export default carsSlice.reducer;
