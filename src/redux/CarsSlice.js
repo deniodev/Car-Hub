@@ -22,9 +22,30 @@ export const getCars = createAsyncThunk('cars/getCars', async (_, { rejectWithVa
 
 export const fetchCarDetails = createAsyncThunk(
   'carDetails/fetchCarDetails',
+  // async (id) => {
+  //     const response = await axios.getaxios.get(`${url}/${id}`)
+  //     return response.data
+  // }
+
   async (id) => {
-      const response = await axios.get(`http://localhost:3000/api/v1/cars/${id}`)
+    try {
+      const response = await axios.get(`${url}/${id}`)
       return response.data
+    } catch (error) {
+      return error.message
+    }
+  }
+)
+
+export const createCars = createAsyncThunk(
+  'cars/createCars',
+  async (carData, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(url, carData)
+      return response.data
+    } catch (err) {
+      return rejectWithValue('Unable to create car')
+    }
   }
 )
 
@@ -46,18 +67,30 @@ const carsSlice = createSlice({
         cars: payload,
         isLoading: false,
       }))
+
       .addCase(fetchCarDetails.pending, (state) => {
         state.isLoadingloading = true
-    })
-    .addCase(fetchCarDetails.fulfilled, (state, { payload }) => {
+      })
+      .addCase(fetchCarDetails.fulfilled, (state, { payload }) => {
         state.carDetails = payload
-        state.isLoading= false
+        state.isLoading = false
         state.hasErrors = false
-    })
-    .addCase(fetchCarDetails.rejected, (state) => {
+      })
+      .addCase(fetchCarDetails.rejected, (state) => {
         state.isLoading = false
         state.hasErrors = true
-    })
+      })
+
+      .addCase(createCars.fulfilled, (state, { payload }) => ({
+        ...state,
+        cars: [...state.cars, payload], // Add the created car to the existing list
+        isLoading: false,
+      }))
+      .addCase(createCars.rejected, (state, { payload }) => ({
+        ...state,
+        isLoading: false,
+        error: payload,
+      }))
   }
 })
 
