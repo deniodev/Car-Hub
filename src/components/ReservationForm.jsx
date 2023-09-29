@@ -13,11 +13,11 @@ const ReservationForm = () => {
   const [userName, setUserName] = useState('');
   const [userId, setUserId] = useState('');
   const [carName, setCarName] = useState('');
+  const [message, setMessage] = useState('');
 
   const { state } = useLocation();
   const carDetails = state ? state.carDetails : null;
   const user = useSelector((state) => state.user.user);
-  console.log('user', user);
   const cars = useSelector((state) => state.cars.cars);
 
   useEffect(() => {
@@ -39,9 +39,7 @@ const findCarId = (name) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const carId = findCarId(carName);
-
     const reservationData = {
       start_date: date,
       end_date: date,
@@ -52,20 +50,22 @@ const findCarId = (name) => {
       car_name: carName || (carDetails ? carDetails.name : null),
     };
 
-    console.log('Submitting reservation data:', reservationData);
-
     dispatch(postReservation(reservationData))
       .then(() => {
-        console.log('Reservation posted successfully');
         dispatch(addReservation(reservationData));
+        setMessage('Reservation added successfully');
         setDate('');
         setCity('');
         setUserName('');
         setCarName('');
         setUserId('');
+
+        setTimeout(() => {
+          setMessage('');
+        }, 5000);
       })
       .catch((error) => {
-        console.error('Error posting reservation:', error);
+        throw Error(error);
       });
   };
 
@@ -77,6 +77,7 @@ const findCarId = (name) => {
     <h1> Car is availbale and ready to be reserved!</h1>
       <hr />
     <p style={{paddingTop: '5px'}}> Please fill the form below to reserve the car and enjoy, you can reserve the car for one day only</p>
+    {message && <p className="success-message">{message}</p>}
     </div>
       <form onSubmit={handleSubmit}>
         <input
