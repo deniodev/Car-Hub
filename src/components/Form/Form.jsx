@@ -7,7 +7,7 @@ import { createCars } from '../../redux/CarsSlice';
 import Input from './Input';
 
 const Form = () => {
-  const { currentUser } = useSelector((state) => state.users);
+  const { currentUser } = useSelector((state) => state.user);
   const [isdisabled, setIsDisabled] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
