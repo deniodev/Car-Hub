@@ -1,0 +1,50 @@
+/* styles.css */
+
+.list-wrapper {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.list-wrapper table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+.list-wrapper table th,
+td {
+  padding: 8px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.list-wrapper table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.list-wrapper table thead th {
+  background-color: rgb(169, 215, 4);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(180, 243, 6);
+}
+
+@media screen and (min-width: 768px) {
+  .list-wrapper table {
+    margin-left: 255px;
+    border-collapse: collapse;
+  }
+}

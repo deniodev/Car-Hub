@@ -1,56 +1,82 @@
-import { NavLink } from "react-router-dom";
-import {useState} from 'react';
-import { FaBars, FaTimes, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'
-import LogoutLink from "./LogoutLink";
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import {
+  FaBars,
+  FaTimes,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+} from 'react-icons/fa';
+import LogoutLink from './LogoutLink';
 
 const Navbar = () => {
-    const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-    const handleClick = () => {
-        setIsActive(!isActive);
-    }
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
 
-    return (
-        <div>
-        <header>
-        <nav className={isActive ? "nav-active" : ""}>
-            
-            <NavLink to="/home" className="logo">Nizzan</NavLink>
-            <ul className="nav-lists">
-                <li>
-                    <NavLink to="/reservation">Reservation</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/myresevation">My Reservation</NavLink>
-                </li>
-                    <li>
-                        <NavLink to="/add">Add Car</NavLink>
-                    </li>
-    
-                    <li>
-                        <NavLink to="/delete">Delete Car</NavLink>
-                    </li>
+  return (
+    <div>
+      <header>
+        <nav className={isActive ? 'nav-active' : ''}>
+          <NavLink to='/' className='logo'>
+            Nizzan
+          </NavLink>
+          <ul className='nav-lists'>
+            <li>
+              <NavLink to='/reservationform'>Reservation</NavLink>
+            </li>
+            <li>
+              <NavLink to='/reservationlist'>My Reservation</NavLink>
+            </li>
+            <li>
+              <NavLink to='/addcar'>Add Car</NavLink>
+            </li>
 
-                    <li>
-                        <LogoutLink />
-                    </li>
+            <li>
+              <NavLink to='/delete'>Delete Car</NavLink>
+            </li>
 
-            </ul>
-            <footer>
-    
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FaFacebook /></a>
-        <a href="https://twitter.com/" target="_blank" rel="noreferrer"><FaTwitter /></a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram /></a>
-        <p>© 2021 Nizzan</p>
-    </footer>
+            <li>
+              <LogoutLink />
+            </li>
+          </ul>
+          <footer>
+            <a
+              href='https://www.facebook.com/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FaFacebook />
+            </a>
+            <a href='https://twitter.com/' target='_blank' rel='noreferrer'>
+              <FaTwitter />
+            </a>
+            <a
+              href='https://www.linkedin.com/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href='https://www.instagram.com/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FaInstagram />
+            </a>
+            <p>© 2021 Nizzan</p>
+          </footer>
         </nav>
-        <div className="humberger" onClick={handleClick}>
-            {isActive ? <FaTimes /> : <FaBars />}
+        <div className='humberger' onClick={handleClick}>
+          {isActive ? <FaTimes /> : <FaBars />}
         </div>
-    </header>
+      </header>
     </div>
-    );
-    }
+  );
+};
 
 export default Navbar;

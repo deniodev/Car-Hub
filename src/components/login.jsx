@@ -36,24 +36,24 @@ const LoginForm = () => {
 
   return (
     <div
-      className="h-screen overflow-hidden bg-cover bg-no-repeat p-12 text-center"
+      className="tw-h-screen tw-overflow-hidden tw-bg-cover tw-bg-no-repeat tw-p-12 tw-text-center"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
     >
       <div
-        className="absolute grid place-items-center bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+        className="tw-absolute tw-grid tw-place-items-center tw-bottom-0 tw-left-0 tw-right-0 tw-top-0 tw-h-full tw-w-full tw-overflow-hidden tw-bg-fixed"
         style={{
           backgroundColor: 'rgba(115, 145, 6, 0.9)',
         }}
       >
-        <div className="items-center text-gray-300 p-2 rounded w-full max-w-lg mx-auto">
-  <h1 className="text-2xl text-white font-semi-bold mb-6">Log In</h1>
+        <div className="tw-items-center tw-text-gray-300 tw-p-2 tw-rounded tw-w-full tw-max-w-lg tw-mx-auto">
+  <h1 className="tw-text-2xl tw-text-white tw-font-semi-bold tw-mb-6">Log In</h1>
 
-  <form className="p-2 flex flex-col gap-4">
-    {error && <p className="text-red-500">{error}</p>}
+  <form className="tw-p-2 tw-flex tw-flex-col tw-gap-4">
+    {error && <p className="tw-text-red-500">{error}</p>}
 
-    <div className="w-full">
+    <div className="tw-w-full">
       <input
         type="text"
         id="username"
@@ -61,14 +61,14 @@ const LoginForm = () => {
         onChange={(e) => setUsername(e.target.value)}
         required
         aria-label="Username"
-        className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+        className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
       />
       {errors.username && (
-        <p className="text-red-500">{errors.username}</p>
+        <p className="tw-text-red-500">{errors.username}</p>
       )}
     </div>
 
-    <div className="w-full">
+    <div className="tw-w-full">
       <input
         type="password"
         id="password"
@@ -76,28 +76,28 @@ const LoginForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         required
         aria-label="Password"
-        className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+        className="tw-w-full tw-bg-gray-100 tw-bg-opacity-20 tw-border tw-border-white tw-text-white tw-rounded-full tw-py-2 tw-px-4 tw-placeholder-gray-300 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-lime-400 tw-focus:border-transparent tw-focus:bg-lime-400 tw-focus:bg-opacity-20"
       />
       {errors.password && (
-        <p className="text-red-500">{errors.password}</p>
+        <p className="tw-text-red-500">{errors.password}</p>
       )}
     </div>
 
     {isLoading ? (
       <div>
-        <div className="w-full md:w-max bg-white text-lime-700 rounded-full py-3 px-4">
-          <div role="status" className="flex items-center">
+        <div className="tw-w-full tw-md:w-max tw-bg-white tw-text-lime-700 tw-rounded-full tw-py-3 tw-px-4">
+          <div role="status" className="tw-flex tw-items-center">
             {/* Loading indicator */}
           </div>
         </div>
       </div>
     ) : (
-      <div className="w-full">
+      <div className="tw-w-full">
         <button
           type="button"
           onClick={handleSubmit}
           disabled={isLoading}
-          className="w-full md:w-max bg-white text-lime-700 rounded-full py-2 px-6 hover:bg-gray-200"
+          className="w-full tw-md:w-max tw-bg-white tw-text-lime-700 tw-rounded-full tw-py-2 tw-px-6 tw-hover:bg-gray-200"
         >
           Log in
         </button>
@@ -109,7 +109,7 @@ const LoginForm = () => {
     Don&apos;t have an account?{' '}
     <Link
       to="/register"
-      className="text-lg font-semi-bold text-white hover:text-gray-300 hover:underline"
+      className="tw-text-lg tw-font-semi-bold tw-text-white tw-hover:text-gray-300 tw-hover:underline"
     >
       Sign up
     </Link>
