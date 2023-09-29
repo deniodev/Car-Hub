@@ -1,14 +1,13 @@
 import{ useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservations } from '../redux/ReservationsSlice';
-import { getCars } from '../redux/CarsSlice';
 import Navbar from './Navbar';
 import '../Style/ReservationList.css'
 
 const ReservationList = () => {
   const { reservations, loading, hasErrors } = useSelector((state) => state.reservations);
   const user = useSelector((state) => state.user.user); 
-  const carName = useSelector((state) => state.cars.cars);
+  const cars= useSelector((state) => state.cars.cars);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,13 +16,18 @@ const ReservationList = () => {
 
   }, [dispatch]);
 
-  const userReservations = reservations.filter((reservation) => reservation.user_id === user.id);
+  const carIdToName= cars.reduce((map, car) => {
+    map[car.id] = car.name;
+    return map;
+  }, {});
 
-  useEffect(() => {
-    userReservations.forEach((reservation) => {
-      dispatch(getCars(reservation.car_id));
-    });
-  }, [dispatch, userReservations]);
+  const userReservations = reservations
+    .filter((reservation) => reservation.user_id === user.id)
+    .map((reservation) => ({
+      ...reservation,
+      car_name: carIdToName[reservation.car_id] || 'Loading...', 
+    }));
+
 
   if (loading) return <p>Loading reservations...</p>;
   if (hasErrors) return <p>Unable to display reservations.</p>;
@@ -33,7 +37,6 @@ const ReservationList = () => {
       <Navbar />
       <div className="list-wrapper">
       <table>
-        
         <thead>
             <tr>
                 <th>Start Date</th>
@@ -53,10 +56,9 @@ const ReservationList = () => {
             <td>
                 {reservation.city}
             </td>
-            <td>{carName[reservation.car_id]?.name || 'Loading...'}</td>
+            <td>{reservation.car_name}</td>
             </tr>
-        ))}
-    
+        ))}  
       </table>
         </div>
     </>
