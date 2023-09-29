@@ -8,11 +8,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Navbar from '../components/Navbar';
-import { getCars, deleteItem } from '../redux/CarsSlice';
+import { getCars, delCarItems } from '../redux/CarsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 
-export default function BasicTable() {
+export default function DeleteCar() {
   const { cars } = useSelector((state) => state.cars);
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ export default function BasicTable() {
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    dispatch(deleteItem(id));
+    dispatch(delCarItems(id));
   };
 
   return (
