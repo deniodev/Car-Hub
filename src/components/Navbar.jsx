@@ -23,9 +23,9 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/reservationlist">My Reservation</NavLink>
                 </li>
-                    <li>
+                    {/* <li>
                         <NavLink to="/addcar">Add Car</NavLink>
-                    </li>
+                    </li> */}
     
                     <li>
                         <NavLink to="/delete">Delete Car</NavLink>

@@ -57,19 +57,19 @@ export const getUsers = createAsyncThunk(
   }
 );
 
-export const createUser = createAsyncThunk(
-  'users/createUser',
-  async (userData, { rejectWithValue }) => {
-    try {
-      const response = await axios.post(url, userData)
-      localStorage.setItem('currentUser', JSON.stringify(response.data))
-      localStorage.setItem('isAuthenticated', true)
-      return response.data
-    } catch (err) {
-      return rejectWithValue('Unable to create user')
-    }
-  }
-);
+// export const createUser = createAsyncThunk(
+//   'users/createUser',
+//   async (userData, { rejectWithValue }) => {
+//     try {
+//       const response = await axios.post(url, userData)
+//       localStorage.setItem('currentUser', JSON.stringify(response.data))
+//       localStorage.setItem('isAuthenticated', true)
+//       return response.data
+//     } catch (err) {
+//       return rejectWithValue('Unable to create user')
+//     }
+//   }
+// );
 
 const userSlice = createSlice({
   name: 'user',
@@ -128,22 +128,22 @@ const userSlice = createSlice({
         error: payload,
       }))
 
-      .addCase(createUser.pending, (state) => ({
-        ...state,
-        isLoading: true,
-      }))
-      .addCase(createUser.fulfilled, (state, { payload }) => ({
-        ...state,
-        user: [...state.users, payload], // Add the created user to the existing list
-        currentUser: payload,
-        isAuthenticated: true,
-        isLoading: false,
-      }))
-      .addCase(createUser.rejected, (state, { payload }) => ({
-        ...state,
-        isLoading: false,
-        error: payload,
-      }))
+      // .addCase(createUser.pending, (state) => ({
+      //   ...state,
+      //   isLoading: true,
+      // }))
+      // .addCase(createUser.fulfilled, (state, { payload }) => ({
+      //   ...state,
+      //   user: [...state.users, payload], // Add the created user to the existing list
+      //   currentUser: payload,
+      //   isAuthenticated: true,
+      //   isLoading: false,
+      // }))
+      // .addCase(createUser.rejected, (state, { payload }) => ({
+      //   ...state,
+      //   isLoading: false,
+      //   error: payload,
+      // }))
   },
 })
 
