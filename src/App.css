@@ -87,6 +87,11 @@ footer a {
   padding-right: 5.5rem;
 }
 
+.delete-table {
+  display: flex;
+  padding-top: 60px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -109,5 +114,19 @@ footer {
 
   .humberger {
     display: none;
+  }
+
+  .delete-table {
+    display: flex;
+    padding: 40px 0 0 300px;
+  }
+
+  .car-img-table {
+    width: 10%;
+  }
+
+  .MuiButton-containedPrimary {
+    color: black !important;
+    background-color: rgb(150, 191, 1) !important;
   }
 }

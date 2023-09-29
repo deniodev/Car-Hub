@@ -12,6 +12,7 @@ import ReservationForm from './components/ReservationForm';
 import ReservationList from './components/ReservationList';
 import AddCars from './pages/AddCars';
 import NotFoundPage from './components/NotFoundPage';
+import DeleteCar from './pages/DeleteCar';
 
 import store from './redux/store';
 import './App.css';
@@ -23,22 +24,23 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-              path='/'
+              path="/"
               element={
                 <ProtectedRoutes>
                   <Home />
                 </ProtectedRoutes>
               }
             />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/' element={<Navbar />} />
-            <Route exact path='/' element={<Home />} />
-            <Route path='/cars/:id' element={<CarDetails />} />
-            <Route path='/reservationform' element={<ReservationForm />} />
-            <Route path='/reservationlist' element={<ReservationList />} />
-            <Route path='/addcar' element={<AddCars />} />
-            <Route path='*' element={<NotFoundPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Navbar />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/cars/:id" element={<CarDetails />} />
+            <Route path="/reservationform" element={<ReservationForm />} />
+            <Route path="/reservationlist" element={<ReservationList />} />
+            <Route path="/addcar" element={<AddCars />} />
+            <Route exact path="/delete" element={<DeleteCar />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </Provider>

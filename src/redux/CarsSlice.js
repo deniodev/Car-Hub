@@ -23,6 +23,19 @@ export const getCars = createAsyncThunk(
   }
 );
 
+export const delCarItems = createAsyncThunk(
+  'cars/delCarItems',
+  async (car, thunkAPI) => {
+    try {
+      const resp = await axios.delete(`${url}/${car}`);
+      resp.data = car;
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const fetchCarDetails = createAsyncThunk(
   'carDetails/fetchCarDetails',
 
@@ -79,7 +92,6 @@ const carsSlice = createSlice({
         state.isLoading = false;
         state.hasErrors = true;
       })
-
       .addCase(createCars.fulfilled, (state, { payload }) => ({
         ...state,
         cars: [...state.cars, payload], // Add the created car to the existing list
@@ -89,8 +101,19 @@ const carsSlice = createSlice({
         ...state,
         isLoading: false,
         error: payload,
+      }))
+      .addCase(delCarItems.fulfilled, (state, { payload }) => ({
+        ...state,
+        cars: [...state.cars.filter((car) => car.id !== payload)],
+        isLoading: false,
+      }))
+      .addCase(delCarItems.rejected, (state, { payload }) => ({
+        ...state,
+        isLoading: false,
+        error: payload,
       }));
   },
 });
 
+// export const { deleteItem } = carsSlice.actions;
 export default carsSlice.reducer;
