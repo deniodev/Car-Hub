@@ -21,7 +21,7 @@ const Navbar = () => {
     <div>
       <header>
         <nav className={isActive ? 'nav-active' : ''}>
-          <NavLink to='/home' className='logo'>
+          <NavLink to='/' className='logo'>
             Nizzan
           </NavLink>
           <ul className='nav-lists'>
