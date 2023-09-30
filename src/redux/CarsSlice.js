@@ -36,6 +36,19 @@ export const delCarItems = createAsyncThunk(
   }
 );
 
+// export const updateCarItem = createAsyncThunk(
+//   'cars/updateCarItem',
+//   async (car, thunkAPI) => {
+//     try {
+//       const response = await axios.put(`${url}/${car.id}`, car.updatedData);
+//       return { id: car.id, updatedData: response.data }
+//       // return response.data
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error)
+//     }
+//   }
+// )
+
 export const fetchCarDetails = createAsyncThunk(
   'carDetails/fetchCarDetails',
 
@@ -67,7 +80,7 @@ const carsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getCars.pending, (state) => {
-        state.isLoading = true;
+        state.isLoading = true
       })
       .addCase(getCars.fulfilled, (state, { payload }) => ({
         ...state,
@@ -81,16 +94,16 @@ const carsSlice = createSlice({
       }))
 
       .addCase(fetchCarDetails.pending, (state) => {
-        state.isLoadingloading = true;
+        state.isLoadingloading = true
       })
       .addCase(fetchCarDetails.fulfilled, (state, { payload }) => {
-        state.carDetails = payload;
-        state.isLoading = false;
-        state.hasErrors = false;
+        state.carDetails = payload
+        state.isLoading = false
+        state.hasErrors = false
       })
       .addCase(fetchCarDetails.rejected, (state) => {
-        state.isLoading = false;
-        state.hasErrors = true;
+        state.isLoading = false
+        state.hasErrors = true
       })
       .addCase(createCars.fulfilled, (state, { payload }) => ({
         ...state,
@@ -102,6 +115,7 @@ const carsSlice = createSlice({
         isLoading: false,
         error: payload,
       }))
+
       .addCase(delCarItems.fulfilled, (state, { payload }) => ({
         ...state,
         cars: [...state.cars.filter((car) => car.id !== payload)],
@@ -111,7 +125,46 @@ const carsSlice = createSlice({
         ...state,
         isLoading: false,
         error: payload,
-      }));
+      }))
+
+      // .addCase(updateCarItem.fulfilled, (state, { payload }) => ({
+      // ...state,
+      // cars: state.cars.map((car) =>
+      //   car.id === payload.id ? { ...car, ...payload.updatedData } : car
+      // ),
+      // isLoading: false,
+      // }))
+      // .addCase(updateCarItem.rejected, (state, { payload }) => ({
+      //   ...state,
+      //   isLoading: false,
+      //   error: payload,
+      // }));
+
+      // .addCase(updateCarItem.fulfilled, (state, { payload }) => {
+      //   // Find the index of the updated car in the cars array
+      //   const updatedCarIndex = state.cars.findIndex(
+      //     (car) => car.id === payload.id
+      //   )
+
+      //   // Create a new array of cars with the updated car data
+      //   const updatedCars = [...state.cars]
+      //   updatedCars[updatedCarIndex] = {
+      //     ...updatedCars[updatedCarIndex],
+      //     ...payload.updatedData,
+      //   }
+
+      //   return {
+      //     ...state,
+      //     cars: updatedCars,
+      //     isLoading: false,
+      //   }
+      // })
+      // .addCase(updateCarItem.rejected, (state, { payload }) => ({
+      //   ...state,
+      //   isLoading: false,
+      //   error: payload,
+      // }))
+
   },
 });
 

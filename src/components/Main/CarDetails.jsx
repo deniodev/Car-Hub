@@ -56,47 +56,49 @@ const annualPercentageRate = (totalInterestPaid / carPrice) / (loanDurationMonth
     <>
     <Navbar />
     <div className="car-details-wrapper">
-    <div className="car-image">
-    <img src={carDetails.image} alt={carDetails.name} />
-    </div>
-    <div className="car-details">
-      <div>
-      <h2 style={{fontWeight: 'bold', paddingTop: '15px'}}>{carDetails.name}</h2>
-      <p style={{padding: '0 0 16px 0', fontWeight: '600', fontSize: '12px'}}>-£350 deposit upon any visa purchase </p>
-    </div>
-    <div className="car-details-table">
+      <div className="car-image">
+        <img src={carDetails.image} alt={carDetails.name} />
+      </div>
+      <div className="car-details">
+        <div>
+        <h2 style={{fontWeight: 'bold', paddingTop: '15px'}}>{carDetails.name}</h2>
+        <p style={{padding: '0 0 16px 0', fontWeight: '600', fontSize: '12px'}}>-£350 deposit upon any visa purchase </p>
+      </div>
+
+      <div className="car-details-table">
+
         <table>
-        <tbody>
-            <tr>
-                <td>Finance Fee</td>
-                  <td style={trStyle}>
-                      £{financeFee.toFixed(2)}
+          <tbody>
+              <tr>
+                  <td>Finance Fee</td>
+                    <td style={trStyle}>
+                        £{financeFee.toFixed(2)}
+                    </td>
+              </tr>
+              <tr>
+                  <td>Option to purchase fee</td>
+                  <td style={trStyle}>£ 
+                      {optionToPurchaseFee}
                   </td>
-            </tr>
-            <tr>
-                <td>Option to purchase fee</td>
-                <td style={trStyle}>£ 
-                    {optionToPurchaseFee}
-                </td>
-            </tr>
-            <tr>
-                <td>Total Amount Payable</td>
-                <td style={trStyle}>£ 
-                    {totalAmountPayable.toFixed(2)}
-                </td>
-            </tr>
-            <tr>
-                <td>Duration</td>
-                <td style={trStyle}>
-                    {loanDurationMonths} Months
-                </td>
-            </tr>
-        </tbody>
+              </tr>
+              <tr>
+                  <td>Total Amount Payable</td>
+                  <td style={trStyle}>£ 
+                      {totalAmountPayable.toFixed(2)}
+                  </td>
+              </tr>
+              <tr>
+                  <td>Duration</td>
+                  <td style={trStyle}>
+                      {loanDurationMonths} Months
+                  </td>
+              </tr>
+          </tbody>
         </table>
 
         <p><strong style={{ fontSize: '1rem', padding: '0 0.5rem'}}
         > {annualPercentageRate.toFixed(2)}% APR</strong> Representative</p>
-    </div>
+      </div>
 
     <div className="discover-more">
       <p style={{fontWeight: '600', padding: '0 0.5rem', fontSize: '12px'}}> DISCOVER MORE MODELS
