@@ -22,7 +22,7 @@ const Navbar = () => {
       <header>
         <nav className={isActive ? 'nav-active' : ''}>
           <NavLink to='/' className='logo'>
-            Nizzan
+            Car-Hub
           </NavLink>
           <ul className='nav-lists'>
             <li>
@@ -68,7 +68,7 @@ const Navbar = () => {
             >
               <FaInstagram />
             </a>
-            <p>© 2021 Nizzan</p>
+            <p>© 2023 Car-Hub</p>
           </footer>
         </nav>
         <div className='humberger' onClick={handleClick}>
