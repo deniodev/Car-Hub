@@ -30,9 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Rent/Buy a Car App <a name="about-project"></a>
+# 📖 Car_reservation_front_end <a name="about-project"></a>
 
-**Rent/Buy a Car App:** is a full stack web application with a react client and rails api that allows users to book reservations for renting or buying a car.
+**Car_reservation_front_end:** is the react client of  a full stack car reservation web application built on the rails api.The main function of the app ia to allows users to book reservations for renting or buying a car.
 
 => [Here is the Reservation-API](https://github.com/unorjikingsley/Reservation-API)
 
