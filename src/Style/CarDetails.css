@@ -45,7 +45,7 @@ tbody tr:nth-child(odd) {
 }
 
 .car-details-button button {
-  background-color: #11ee01b5;
+  background-color: rgb(150, 191, 1);
   color: #fff;
   padding: 1rem;
   border: none;
