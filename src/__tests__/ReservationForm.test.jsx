@@ -19,7 +19,7 @@
 //     const dateInput = getByPlaceholderText('Reservation Date');
 //     const cityInput = getByPlaceholderText('City');
 //     const usernameInput = getByPlaceholderText('Username');
-//     const reserveButton = getByText('Reserve');
+//     const reserveButton = getByText('Check Now');
   
 //     expect(dateInput).toBeInTheDocument();
 //     expect(cityInput).toBeInTheDocument();
@@ -39,7 +39,7 @@
 //     const dateInput = getByPlaceholderText('Reservation Date');
 //     const cityInput = getByPlaceholderText('City');
 //     const usernameInput = getByPlaceholderText('Username');
-//     const reserveButton = getByText('Reserve');
+//     const reserveButton = getByText('Check Now');
   
 //     fireEvent.change(dateInput, { target: { value: '2023-10-02' } });
 //     fireEvent.change(cityInput, { target: { value: 'New York' } });

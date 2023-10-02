@@ -204,7 +204,7 @@ exports[`Reservations > should render reservations 1`] = `
             class="reserve-button"
             type="submit"
           >
-            Reserve
+            Check Now
           </button>
         </form>
       </div>
@@ -410,7 +410,7 @@ exports[`Reservations > should render reservations 1`] = `
           class="reserve-button"
           type="submit"
         >
-          Reserve
+          Check Now
         </button>
       </form>
     </div>
