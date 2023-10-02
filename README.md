@@ -1,8 +1,6 @@
-<a name="readme-top"></a>
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-<div align="center">
-
-<h3><b>car_reservation_front_end</b></h3>
+<h1><b>car_reservation_front_end</b></h1>
 
 </div>
 
@@ -32,11 +30,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Rent/Buy a Car App <a name="about-project"></a>
+# 📖 Car_reservation_front_end <a name="about-project"></a>
 
-**Rent/Buy a Car App:** is a full stack web application with a react client and rails api that allows users to book reservations for renting or buying a car.
+**Car_reservation_front_end:** is the react client of  a full stack car reservation web application built on the rails api.The main function of the app ia to allows users to book reservations for renting or buying a car.
 
-=> [Link to the Back-end rails app](https://github.com/unorjikingsley/Reservation-API)
+=> [Here is the Reservation-API](https://github.com/unorjikingsley/Reservation-API)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -109,7 +107,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/unorjikingsley/Reservation-API.git
+  git clone https://github.com/deniodev/car_reservation_front_end.git
 ```
 
 ### Install
