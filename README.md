@@ -107,7 +107,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/unorjikingsley/Reservation-API.git
+  git clone https://github.com/deniodev/car_reservation_front_end.git
 ```
 
 ### Install
