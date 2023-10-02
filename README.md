@@ -1,8 +1,6 @@
-<a name="readme-top"></a>
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-<div align="center">
-
-<h3><b>car_reservation_front_end</b></h3>
+<h1><b>car_reservation_front_end</b></h1>
 
 </div>
 
