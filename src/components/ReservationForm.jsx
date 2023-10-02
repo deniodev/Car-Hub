@@ -64,8 +64,8 @@ const findCarId = (name) => {
           setMessage('');
         }, 5000);
       })
-      .catch((error) => {
-        setMessage('An error occurred while adding the reservation, please try again');
+      .catch(() => {
+        setMessage('An error occurred while adding the reservation, please try again}');
       });
   };
 
