@@ -24,7 +24,7 @@ const CarDetails = () => {
 
   useEffect(() => {
     dispatch(fetchCarDetails(id));
-  }, [dispatch, id]);
+  }, [id]);
 
   if (hasErrors) {
     return <div>There was an error fetching car details.</div>;
@@ -96,22 +96,20 @@ const annualPercentageRate = (totalInterestPaid / carPrice) / (loanDurationMonth
           </tbody>
         </table>
 
-        <p><strong style={{ fontSize: '1rem', padding: '0 0.5rem'}}
-        > {annualPercentageRate.toFixed(2)}% APR</strong> Representative</p>
+        <p><strong style={{ fontSize: '1rem', padding: '0.5rem'}}
+        > {annualPercentageRate.toFixed(2)}% APR</strong><em>Representative</em></p>
       </div>
 
     <div className="discover-more">
       <p style={{fontWeight: '600', padding: '0 0.5rem', fontSize: '12px'}}> DISCOVER MORE MODELS
-        <span> 
-        
+        <span>
             <a href="#">  <FaAngleRight /> </a>
         </span>
       </p>
       <img src={multicolor} alt="multicolor" className="multicolor" />
     </div>
     <div className="car-details-button">
-    <Link to="/reservationForm" state={{carDetails: carDetails,
-     cars: cars
+    <Link to="/reservationForm" state={{carDetails: carDetails, cars: cars
     }} >
     <button>
         <span style={{paddingRight: '15px', color: 'white'}}> <FaSun /> </span>

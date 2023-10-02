@@ -12,8 +12,6 @@ const ReservationList = () => {
 
   useEffect(() => {
     dispatch(fetchReservations());
-    console.log('fetching reservations');
-
   }, [dispatch]);
 
   const carIdToName= cars.reduce((map, car) => {

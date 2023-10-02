@@ -64,8 +64,8 @@ const findCarId = (name) => {
           setMessage('');
         }, 5000);
       })
-      .catch((error) => {
-        throw Error(error);
+      .catch(() => {
+        setMessage('An error occurred while adding the reservation, please try again}');
       });
   };
 
@@ -122,7 +122,7 @@ const findCarId = (name) => {
         
         )}
         <button type="submit" className="reserve-button">
-          Reserve
+          Check Now
         </button>
       </form>
     </div>
