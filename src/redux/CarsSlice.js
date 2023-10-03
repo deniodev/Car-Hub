@@ -9,7 +9,7 @@ const initialState = {
   hasErrors: false,
 };
 
-const url = 'http://localhost:3000/api/v1/cars';
+const url = 'https://carhub-nxj0.onrender.com/api/v1/cars';
 
 export const getCars = createAsyncThunk(
   'cars/getCars',
