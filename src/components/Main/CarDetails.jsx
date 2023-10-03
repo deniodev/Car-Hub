@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { fetchCarDetails } from "../../redux/CarsSlice";
 import { Link } from "react-router-dom";
 import { FaAngleRight, FaSun, FaArrowAltCircleRight} from 'react-icons/fa'
-import multicolor from '../../assets/multicolor.png'
-import '../../Style/carDetails.css'
+import multicolor from '../../assets/multicolor.png';
+import '../../Style/carDetails.css';
 import Navbar from "../Navbar";
 
 const CarDetails = () => {
