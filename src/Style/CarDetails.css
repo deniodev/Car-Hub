@@ -41,7 +41,7 @@ tbody tr:nth-child(odd) {
   color: orange;
   padding-left: 0.3rem;
   margin-bottom: -0.2rem;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 
 .car-details-button button {

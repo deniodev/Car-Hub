@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addReservation, postReservation } from '../redux/ReservationsSlice';
 import { useLocation } from 'react-router-dom';
 import { getCars } from '../redux/CarsSlice';
-import '../Style/Reservation.css';
+import '../Style/reservation.css';
 import Navbar from './Navbar';
 
 const ReservationForm = () => {
