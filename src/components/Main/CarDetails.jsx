@@ -20,7 +20,7 @@ const CarDetails = () => {
   const carDetails = useSelector((state) => state.cars.carDetails)
   const loading = useSelector((state) => state.cars.loading);
   const hasErrors = useSelector((state) => state.cars.hasErrors);
- const cars = useSelector((state) => state.cars);
+  const cars = useSelector((state) => state.cars);
 
   useEffect(() => {
     dispatch(fetchCarDetails(id));

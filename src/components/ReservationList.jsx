@@ -2,7 +2,7 @@ import{ useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservations } from '../redux/ReservationsSlice';
 import Navbar from './Navbar';
-import '../Style/ReservationList.css'
+import '../Style/reservationList.css'
 
 const ReservationList = () => {
   const { reservations, loading, hasErrors } = useSelector((state) => state.reservations);
