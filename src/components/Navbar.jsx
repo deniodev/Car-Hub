@@ -24,6 +24,7 @@ const Navbar = () => {
           <NavLink to='/' className='logo'>
             Car-Hub
           </NavLink>
+
           <ul className='nav-lists'>
             <li>
               <NavLink to='/reservationform'>Reservation</NavLink>
