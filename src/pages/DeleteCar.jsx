@@ -12,11 +12,11 @@ import { getCars, delCarItems } from '../redux/CarsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 
-export default function DeleteCar() {
+const DeleteCar = () => {
   const { cars } = useSelector((state) => state.cars);
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(getCars());
   }, [dispatch]);
 
@@ -29,17 +29,17 @@ export default function DeleteCar() {
       <div>
         <Navbar />
       </div>
-      <div className="delete-table">
+      <div className='delete-table'>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: 650 }} aria-label='simple table'>
             <TableHead>
               <TableRow>
                 <TableCell>Car</TableCell>
-                <TableCell align="center">Image</TableCell>
-                <TableCell align="left">Description</TableCell>
-                <TableCell align="left">Price&nbsp;($)</TableCell>
-                <TableCell align="left">Model</TableCell>
-                <TableCell align="center">Delete</TableCell>
+                <TableCell align='center'>Image</TableCell>
+                <TableCell align='left'>Description</TableCell>
+                <TableCell align='left'>Price&nbsp;($)</TableCell>
+                <TableCell align='left'>Model</TableCell>
+                <TableCell align='center'>Delete</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -48,21 +48,20 @@ export default function DeleteCar() {
                   key={car.id}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="car">
+                  <TableCell component='th' scope='car'>
                     {car.name}
                   </TableCell>
-                  <TableCell align="left" className="car-img-table">
-                    <img src={car.image} alt="car-image" />
+                  <TableCell align='left' className='car-img-table'>
+                    <img src={car.image} alt='car-image' />
                   </TableCell>
-                  <TableCell align="left">{car.description}</TableCell>
-                  <TableCell align="left">{car.price}</TableCell>
-                  <TableCell align="left">{car.model}</TableCell>
-                  <TableCell align="center">
+                  <TableCell align='left'>{car.description}</TableCell>
+                  <TableCell align='left'>{car.price}</TableCell>
+                  <TableCell align='left'>{car.model}</TableCell>
+                  <TableCell align='center'>
                     <Button
-                      variant="contained"
-                      // color="error"
+                      variant='contained'
                       sx={{ color: 'blue' }}
-                      size="small"
+                      size='small'
                       startIcon={<DeleteIcon />}
                       onClick={() => handleDelete(car.id)}
                     >
@@ -76,5 +75,7 @@ export default function DeleteCar() {
         </TableContainer>
       </div>
     </>
-  )
-}
+  );
+};
+
+export default DeleteCar;
