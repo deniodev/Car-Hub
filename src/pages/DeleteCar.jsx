@@ -12,6 +12,7 @@ import { getCars, delCarItems } from '../redux/CarsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 
+// DeleteCar removes a car item from the database
 const DeleteCar = () => {
   const { cars } = useSelector((state) => state.cars);
   const dispatch = useDispatch();
