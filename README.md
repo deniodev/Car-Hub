@@ -30,9 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Car_reservation_front_end <a name="about-project"></a>
+# 📖 Carhub App <a name="about-project"></a>
 
-**Car_reservation_front_end:** is the react client of  a full stack car reservation web application built on the rails api.The main function of the app ia to allows users to book reservations for renting or buying a car.
+**CCarhub App:** is the react client of  a full stack car reservation web application built on the rails API.The main function of the app is to allow users to book reservations for renting or buying a car.
 
 => [Here is the Reservation-API](https://github.com/unorjikingsley/Reservation-API)
 
