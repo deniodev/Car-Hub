@@ -30,6 +30,7 @@ const DeleteCar = () => {
       <div>
         <Navbar />
       </div>
+
       <div className='delete-table'>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label='simple table'>
