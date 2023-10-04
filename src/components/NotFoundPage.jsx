@@ -1,7 +1,10 @@
 const NotFoundPage = () => {
   return (
     <div>
-      <h1>Wrong link please check the link and provide the right one</h1>
+      <h1>
+        The page you are looking for does not exist. Please provide a correct
+        link
+      </h1>
     </div>
   );
 };
