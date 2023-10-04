@@ -124,7 +124,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  npm run start
+  npm run dev or yarn run dev
 ```
 
 ### Run tests
