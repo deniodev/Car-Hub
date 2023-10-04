@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-<h1><b>car_reservation_front_end</b></h1>
+<h1><b>Carhub App Frontend</b></h1>
 
 </div>
 
@@ -32,7 +32,7 @@
 
 # 📖 Carhub App <a name="about-project"></a>
 
-**CCarhub App:** is the react client of  a full stack car reservation web application built on the rails API.The main function of the app is to allow users to book reservations for renting or buying a car.
+**Carhub App:** is the react client of  a full stack car reservation web application built on the rails API.The main function of the app is to allow users to book reservations for renting or buying a car.
 
 => [Here is the Reservation-API](https://github.com/unorjikingsley/Reservation-API)
 
@@ -44,6 +44,9 @@
  <summary>Client</summary>
   <ul>
     <li><a href="https://react.dev/">ReactJS</a></li>
+  </ul>
+  <ul>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
   </ul>
 </details>
 
