@@ -11,9 +11,7 @@ import {
 import { getCars } from '../redux/CarsSlice';
 import CarsModel from '../components/Main/CarsModel';
 import Navbar from "../components/Navbar";
-
 import '../Style/home.css';
-
 
 const Home = () => {
   const { cars, err, isLoading } = useSelector((state) => state.cars);
