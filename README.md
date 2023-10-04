@@ -13,7 +13,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [🎥 Video](#video)
+  - [Kanban Board](#Kanban-Board)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -80,11 +80,17 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="#">Rent/Buy a car App Live</a>
+- <a href="https://dev--cozy-concha-614dd5.netlify.app/">Carhub App Live</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎥 Video <a name="video"></a>
+## Kanban Board <a name="Kanban-Board"></a>
+
+ ## A Team of 5 Members worked on this project - [See list of authors](#authors)
+   - <a href="https://github.com/users/unorjikingsley/projects/6/views/1">Kanban Board Link</a>
+    - [Kanban Screenshot 1](https://user-images.githubusercontent.com/99336776/272520515-00422de1-c8f6-4970-839b-bd1ae78846b3.png)
+    - [Kanban Screenshot 2](https://user-images.githubusercontent.com/99336776/272520581-ffb1d505-33b2-4727-8a8e-5b9a2961b9e3.png)
+    - [Kanban Screenshot 3](https://user-images.githubusercontent.com/99336776/272520633-b4b7e1dc-cfe2-4e1c-9019-d4cac923e4b2.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
