@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.home-cont {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 65px);
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+
+.contr {
+  width: 100%;
+  height: auto;
+}
+
+.contr .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #000;
+}
+
+.header-subtitle {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  height: 100%;
+}
+
+.cars {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc(100% - 1rem);
+}
+
+.card:hover {
+  border: 3px solid rgb(150, 191, 1);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.img-cont {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.img {
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1%;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+button.prev,
+button.next {
+  background-color: lightgray;
+}
+
+.btn {
+  display: inline;
+  color: #fff;
+  width: 20%;
+  height: 2.5rem;
+  border: none;
+  margin-bottom: 36%;
+}
+
+.btn:hover {
+  background-color: rgb(150, 191, 1);
+  cursor: pointer;
+}
+
+.prev {
+  background-color: #000;
+  border-radius: 0 25px 25px 0;
+  padding-left: 25px;
+}
+
+.next {
+  border-radius: 25px 0 0 25px;
+  padding-left: 15px;
+}
+
+.prev.disable {
+  background-color: #cecaca;
+}
+
+.next.disabled {
+  background-color: #cecaca;
+}
+
+.home-details-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 5%;
+  color: #605d5d;
+  font-size: 0.5rem;
+  list-style: none;
+}
+
+.home-details-links li {
+  padding: 0.5rem;
+  border: 2px solid #d1cece;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home .loading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20rem;
+}
+
+.home .none {
+  font-size: 2rem;
+  color: #ff8c00;
+  text-align: center;
+  margin-bottom: 20rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.loading {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #80a301 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #80a301);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 0.5s infinite linear;
+}
+
+@keyframes s3 {
+  100% { transform: rotate(1turn); }
+}
+
+/* Media Query for smaller Screens */
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .home {
+    width: 65%;
+    margin-left: 4rem;
+  }
+
+  .contr {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    gap: 0.5rem;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+    gap: 10px;
+  }
+
+  .btn {
+    display: inline;
+    color: white;
+    background-color: rgb(150, 191, 1);
+    width: 2%;
+    height: 2.5rem;
+    border: none;
+    margin-bottom: 2%;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 calc(33% - 10px);
+    height: 100%;
+    text-align: center;
+  }
+
+  .cars {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .img-cont {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .home-cont {
+    display: flex;
+  }
+
+  .contr .header {
+    gap: 0;
+    margin-bottom: 5%;
+  }
+
+  .header-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-subtitle {
+    margin-bottom: 1.6rem;
+  }
+
+  .home {
+    height: 100%;
+    width: 80.45%;
+  }
+
+  .contr {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrap {
+    min-height: 500px;
+    padding: 20px 0;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 1rem);
+    min-height: 100%;
+    width: 80%;
+  }
+
+  .img-cont {
+    margin-bottom: 10%;
+    width: 25vw;
+    height: 27vh;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  .btn {
+    width: 4rem;
+    height: 3rem;
+    margin-bottom: 11rem;
+  }
+
+  .home .none {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-cont {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .home {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+  }
+
+  .contr {
+    height: auto;
+  }
+
+  .header-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .wrap {
+    margin-top: 10rem;
+  }
+
+  .cars {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cardlink {
+    width: 100%;
+  }
+
+  .img-cont {
+    width: 220px;
+  }
+}
