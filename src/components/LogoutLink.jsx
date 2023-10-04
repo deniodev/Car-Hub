@@ -7,7 +7,7 @@ const LogoutLink = () => {
   };
 
   return (
-    <Link to="/login" onClick={handleLogout}>
+    <Link to='/login' onClick={handleLogout}>
       Logout
     </Link>
   );
