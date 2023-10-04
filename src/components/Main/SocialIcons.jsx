@@ -11,12 +11,10 @@ const SocialIcons = ({ className }) => (
     <Icon icon={<FaFacebookF />} />
     <Icon icon={<FaInstagram />} />
   </ul>
-)
+);
 
 SocialIcons.propTypes = {
   className: PropTypes.string.isRequired,
-}
+};
 
 export default SocialIcons;
-
-
