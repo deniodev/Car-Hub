@@ -17,35 +17,33 @@ import DeleteCar from './pages/DeleteCar';
 import store from './redux/store';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <ProtectedRoutes>
-                  <Home />
-                </ProtectedRoutes>
-              }
-            />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Navbar />} />
-            <Route exact path="/" element={<Home />} />
-            <Route path="/cars/:id" element={<CarDetails />} />
-            <Route path="/reservationform" element={<ReservationForm />} />
-            <Route path="/reservationlist" element={<ReservationList />} />
-            <Route path="/addcar" element={<AddCars />} />
-            <Route exact path="/delete" element={<DeleteCar />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <ProtectedRoutes>
+                <Home />
+              </ProtectedRoutes>
+            }
+          />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/' element={<Navbar />} />
+          <Route exact path='/' element={<Home />} />
+          <Route path='/cars/:id' element={<CarDetails />} />
+          <Route path='/reservationform' element={<ReservationForm />} />
+          <Route path='/reservationlist' element={<ReservationList />} />
+          <Route path='/addcar' element={<AddCars />} />
+          <Route exact path='/delete' element={<DeleteCar />} />
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  </div>
+);
 
 export default App;
