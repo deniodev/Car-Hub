@@ -1,14 +1,15 @@
-import PropTypes from "prop-types";
-import SocialIcons from "./SocialIcons";
+import PropTypes from 'prop-types';
+import SocialIcons from './SocialIcons';
 
 const CarsModel = ({ car }) => (
-  <div className="card" key={car.id}>
-    <div className="img-cont">
-      <img src={car.image} alt={car.name} className="img" />
+  <div className='card' key={car.id}>
+    <div className='img-cont'>
+      <img src={car.image} alt={car.name} className='img' />
     </div>
-    <h5 className="card-title">{car.name}</h5>
-    <p className="card-text">{car.description}</p>
-    <SocialIcons className="home-details-links" />
+
+    <h5 className='card-title'>{car.name}</h5>
+    <p className='card-text'>{car.description}</p>
+    <SocialIcons className='home-details-links' />
   </div>
 );
 
