@@ -22,20 +22,19 @@ const ReservationForm = () => {
 
   useEffect(() => {
     dispatch(getCars());
-}, [dispatch]);
+  }, [dispatch]);
 
-useEffect(() => {
+  useEffect(() => {
+    if (user) {
+      setUserName(user.username);
+      setUserId(user.id);
+    }
+  }, [user]);
 
-  if (user) {
-    setUserName(user.username);
-    setUserId(user.id); 
-  }
-}, [user]);
-
-const findCarId = (name) => {
+  const findCarId = (name) => {
     const car = cars.find((car) => car.name === name);
-    return car? car.id : null;
-}
+    return car ? car.id : null;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,67 +64,71 @@ const findCarId = (name) => {
         }, 5000);
       })
       .catch(() => {
-        setMessage('An error occurred while adding the reservation, please try again}');
+        setMessage(
+          'An error occurred while adding the reservation, please try again}'
+        );
       });
   };
 
   return (
     <>
-    <Navbar />
-    <div className="form-container">
-    <div className="reservation-title">
-    <h1> Car is availbale and ready to be reserved!</h1>
-      <hr />
-    <p style={{paddingTop: '5px'}}> Please fill the form below to reserve the car and enjoy, you can reserve the car for one day only</p>
-    {message && <p className="success-message">{message}</p>}
-    </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="date"
-          placeholder="Reservation Date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="City"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <input
-         type="text"
-         placeholder="Username"
-         value={userName}
-         onChange={(e) => setUserName(e.target.value)}
-        />
-        {carDetails ? (
+      <Navbar />
+      <div className='form-container'>
+        <div className='reservation-title'>
+          <h1> Car is availbale and ready to be reserved!</h1>
+          <hr />
+          <p style={{ paddingTop: '5px' }}>
+            {' '}
+            Please fill the form below to reserve the car and enjoy, you can
+            reserve the car for one day only
+          </p>
+          {message && <p className='success-message'>{message}</p>}
+        </div>
+        <form onSubmit={handleSubmit}>
           <input
-            type="text"
-            placeholder="Car Name"
-            value={carDetails ? carDetails.name : ''}
-            onChange={(e) => setCarName(e.target.value)}
+            type='date'
+            placeholder='Reservation Date'
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
           />
-        ) : (
-          <select
-            value={carName}
-            onChange={(e) => setCarName(e.target.value)}
+          <input
+            type='text'
+            placeholder='City'
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <input
+            type='text'
+            placeholder='Username'
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          {carDetails ? (
+            <input
+              type='text'
+              placeholder='Car Name'
+              value={carDetails ? carDetails.name : ''}
+              onChange={(e) => setCarName(e.target.value)}
+            />
+          ) : (
+            <select
+              value={carName}
+              onChange={(e) => setCarName(e.target.value)}
             >
-            <option value="">Select a car</option>
-            {cars.map((car) => (
+              <option value=''>Select a car</option>
+              {cars.map((car) => (
                 <option key={car.id} value={car.name} className='car-option'>
-                {car.name}
-                {car.id}
+                  {car.name}
+                  {car.id}
                 </option>
-            ))}
-        </select>
-
-        
-        )}
-        <button type="submit" className="reserve-button">
-          Check Now
-        </button>
-      </form>
-    </div>
+              ))}
+            </select>
+          )}
+          <button type='submit' className='reserve-button'>
+            Check Now
+          </button>
+        </form>
+      </div>
     </>
   );
 };
