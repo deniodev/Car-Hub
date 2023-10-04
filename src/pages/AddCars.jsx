@@ -7,9 +7,10 @@ import '../Style/addcars.css';
 const AddCars = () => (
   <div className='carpage'>
     <Navbar />
+
     <div className='addcar-cont'>
       <h2>ADD A NEW CAR</h2>
-      
+
       <div className='add-car-overlay'>
         <Form />
       </div>
