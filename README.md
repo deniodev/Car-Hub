@@ -105,8 +105,8 @@ In order to run this project you need:
 
 - `React`
 - `Redux`
-- `Railwind`
-- `CSSa and HTML`
+- `Rails`
+- `Tailwind CSS and HTML`
 - `Code editor (VSCode, RubyMine)`
 
 ### Setup
@@ -188,6 +188,8 @@ You can deploy this project using your own deployment solution
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add an option to buy new cars**
+- **Implement Edit button in the Delete car section**
+- **Redirect the email confirmation link to login page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,7 +217,7 @@ If you like this project consider adding a ⭐️
 
 Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
 
-We would like to thank [Microverse](https://bit.ly/MicroverseTN)..
+We would like to thank [Microverse](https://bit.ly/MicroverseTN).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
