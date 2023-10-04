@@ -24,7 +24,7 @@ const CarDetails = () => {
 
   useEffect(() => {
     dispatch(fetchCarDetails(id));
-  }, [id]);
+  }, [dispatch, id]);
 
   if (hasErrors) {
     return <div>There was an error fetching car details.</div>;
