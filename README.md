@@ -182,7 +182,7 @@ You can deploy this project using your own deployment solution
 
 - GitHub: [@Denio Nhanale](https://github.com/deniodev)
 - Twitter: [@Denio Nhanale](https://twitter.com/DNhanale)
-- LinkedIn: [Denio Nhanale](www.linkedin.com/in/denionhanale)
+- LinkedIn: [@Denio Nhanale](https://www.linkedin.com/in/denionhanale/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
