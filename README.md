@@ -2,6 +2,9 @@
 
 <h1><b>Carhub App Frontend</b></h1>
 
+![carhub](https://github.com/deniodev/Car-Hub/assets/92977776/99b530fd-596a-42d4-a497-1105aa6fa67f)
+
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
