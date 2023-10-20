@@ -2,7 +2,8 @@
 
 <h1><b>Carhub App Frontend</b></h1>
 
-![car](https://github.com/deniodev/Car-Hub/assets/92977776/4c71a12e-f0fd-4515-acb4-257b1fc251fd)
+
+![car](https://github.com/deniodev/Car-Hub/assets/92977776/5d26a7d7-be83-4701-b1f5-6f77531be54e)
 
 
 
