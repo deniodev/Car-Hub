@@ -115,7 +115,7 @@ In order to run this project you need:
 - `Redux`
 - `Rails`
 - `Tailwind CSS and HTML`
-- `Code editor (VSCode, RubyMine)`
+- `Code editor`
 
 ### Setup
 
