@@ -160,6 +160,12 @@ You can deploy this project using your own deployment solution
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Denio Nhanale**
+
+- GitHub: [@Denio Nhanale](https://github.com/deniodev)
+- Twitter: [@Denio Nhanale](https://twitter.com/DNhanale)
+- LinkedIn: [@Denio Nhanale](https://www.linkedin.com/in/denionhanale/)
+
 👤 **Unorji Kingsley**
 
 - GitHub: [@unorjikingsley](https://github.com/unorjikingsley)
@@ -182,12 +188,6 @@ You can deploy this project using your own deployment solution
 - GitHub: [@Saluumaa](https://github.com/saluumaa)
 - Twitter: [@SalmaHIbrahim20](https://twitter.com/SalmaHIbrahim20)
 - LinkedIn: [Salma ibrahim](https://www.linkedin.com/in/salma-ibrahim-78bb5a14a/)
-
-👤 **Denio Nhanale**
-
-- GitHub: [@Denio Nhanale](https://github.com/deniodev)
-- Twitter: [@Denio Nhanale](https://twitter.com/DNhanale)
-- LinkedIn: [@Denio Nhanale](https://www.linkedin.com/in/denionhanale/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
