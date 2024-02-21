@@ -4,14 +4,14 @@ import axios from "axios";
 export const fetchReservations = createAsyncThunk(
     'reservations/fetchReservations',
     async () => {
-        const response = await axios.get('https://carhub-nxj0.onrender.com/api/v1/reservations')
+        const response = await axios.get('https://reservation-api-3po5.onrender.com/api/v1/reservations')
         return response.data
     }
 )
 
 export const postReservation = createAsyncThunk('reservations/postReservation',async (reservation) => {
        try {
-        const response = await axios.post('https://carhub-nxj0.onrender.com/api/v1/reservations', reservation)
+        const response = await axios.post('https://reservation-api-3po5.onrender.com/api/v1/reservations', reservation)
         return response.data
        } catch (error) {
            console.log(error)
