@@ -9,7 +9,7 @@ const initialState = {
   hasErrors: false,
 };
 
-const url = 'https://carhub-nxj0.onrender.com/api/v1/cars';
+const url = 'https://reservation-api-3po5.onrender.com/api/v1/cars';
 
 export const getCars = createAsyncThunk(
   'cars/getCars',
@@ -36,18 +36,7 @@ export const delCarItems = createAsyncThunk(
   }
 );
 
-// export const updateCarItem = createAsyncThunk(
-//   'cars/updateCarItem',
-//   async (car, thunkAPI) => {
-//     try {
-//       const response = await axios.put(`${url}/${car.id}`, car.updatedData);
-//       return { id: car.id, updatedData: response.data }
-//       // return response.data
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error)
-//     }
-//   }
-// )
+
 
 export const fetchCarDetails = createAsyncThunk(
   'carDetails/fetchCarDetails',
@@ -126,44 +115,6 @@ const carsSlice = createSlice({
         isLoading: false,
         error: payload,
       }))
-
-      // .addCase(updateCarItem.fulfilled, (state, { payload }) => ({
-      // ...state,
-      // cars: state.cars.map((car) =>
-      //   car.id === payload.id ? { ...car, ...payload.updatedData } : car
-      // ),
-      // isLoading: false,
-      // }))
-      // .addCase(updateCarItem.rejected, (state, { payload }) => ({
-      //   ...state,
-      //   isLoading: false,
-      //   error: payload,
-      // }));
-
-      // .addCase(updateCarItem.fulfilled, (state, { payload }) => {
-      //   // Find the index of the updated car in the cars array
-      //   const updatedCarIndex = state.cars.findIndex(
-      //     (car) => car.id === payload.id
-      //   )
-
-      //   // Create a new array of cars with the updated car data
-      //   const updatedCars = [...state.cars]
-      //   updatedCars[updatedCarIndex] = {
-      //     ...updatedCars[updatedCarIndex],
-      //     ...payload.updatedData,
-      //   }
-
-      //   return {
-      //     ...state,
-      //     cars: updatedCars,
-      //     isLoading: false,
-      //   }
-      // })
-      // .addCase(updateCarItem.rejected, (state, { payload }) => ({
-      //   ...state,
-      //   isLoading: false,
-      //   error: payload,
-      // }))
 
   },
 });

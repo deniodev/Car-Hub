@@ -11,7 +11,7 @@ const initialState = {
   error: null,
 };
 
-const url = 'https://carhub-nxj0.onrender.com/api/v1/users';
+const url = 'https://reservation-api-3po5.onrender.com/api/v1/users';
 
 const makeApiCall = async (endpoint, user, thunkAPI) => {
   try {
