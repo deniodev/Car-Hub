@@ -113,7 +113,7 @@ In order to run this project you need:
 
 - `React`
 - `Redux`
-- `Rails`
+- `Ruby on Rails`
 - `Tailwind CSS and HTML`
 - `Code editor`
 
